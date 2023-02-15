@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    @{
+    if (IsPost) {
+        string companyname = Request.Form["companyname"];
+        string contactname = Request.Form["contactname"];
+    }
+
+}
+
+<form method="post">
+    <label>Student Stream:</label>
+    <select name="stream">
+        <option value="volvo">CSE</option>
+        <option value="saab">CE</option>
+        <option value="opel">EEE</option>
+        <option value="audi">ECE</option>
+    </select>
+
+    <label>Student Name:</label>
+    <input type="text" name="name" />
+
+    <input type="submit" value="Save">
+</form>
